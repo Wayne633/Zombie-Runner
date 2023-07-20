@@ -32,10 +32,16 @@ public class EnemyAI : MonoBehaviour
         else if (distanceToTarget <= chaseRange)
         {
             isProvoked = true;
-
-
         }
     }
+
+    public void OnDamageTaken()
+    {
+        isProvoked= true;  
+    }
+
+
+
 
     private void EngageTarget()
     {
